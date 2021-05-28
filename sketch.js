@@ -14,7 +14,7 @@ function preload(){
 //Function to set initial environment
 function setup() {
   database = firebase.database( );
-  balloonPositionRef = database.ref('balloon/hegiht');
+  balloonPositionRef = database.ref('balloon/height');
   balloonPositionRef.on("value",readPosition, showError);
 
   createCanvas(1500,700);
@@ -57,7 +57,7 @@ function draw() {
 }
 
 function changePosition(x,y) {
-  database.ref('balloon/hegiht').update({
+  database.ref('balloon/height').update({
     'x':newPosition.x + x,
     'y':newPosition.y + y
 })
