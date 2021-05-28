@@ -27,6 +27,8 @@ function setup() {
 
 // function to display UI
 function draw() {
+   if(newPosition !== undefined){
+   
   background(bg);
 
   if(keyDown(LEFT_ARROW)){
@@ -53,7 +55,7 @@ function draw() {
   stroke("white");
   textSize(25);
   text("**Use arrow keys to move Hot Air Balloon!",40,40);
-
+}
 }
 
 function changePosition(x,y) {
